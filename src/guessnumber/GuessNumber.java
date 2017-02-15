@@ -22,8 +22,11 @@ public class GuessNumber {
     public static void main(String[] args) {
         Random rand = new Random();
         Scanner scanner = new Scanner(System.in);
-        number = rand.nextInt(100);
-        
+
+        System.out.println("Please enter a max number to guess: ");
+        maxValue = scanner.nextInt();
+        number = rand.nextInt(maxValue);
+
         while (guess != number){
             System.out.println("Enter your guess: ");
             guess = scanner.nextInt();
